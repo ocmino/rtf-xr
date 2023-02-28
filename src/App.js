@@ -18,6 +18,10 @@ function App() {
             <pointLight position={[10, 10, 10]} />
             <Controllers />
             <Experience />
+            <mesh>
+              <boxGeometry />
+              <meshNormalMaterial />
+            </mesh>
             <Controllers />
           </XR>
         </Canvas>
