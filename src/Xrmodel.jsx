@@ -7,7 +7,6 @@ import React  from "react";
 import { useGLTF } from "@react-three/drei";
 import { useCustomization } from "./context/Customization";
 import * as THREE from "three";
-import { Interactive } from "@react-three/xr";
 
 const XRModel = (props) => {
   const { nodes } = useGLTF("/models/xrmodel.gltf");
@@ -17,7 +16,6 @@ const XRModel = (props) => {
   const Red = new THREE.Color(0xff0000);
 
   return (
-    <Interactive>
     <group {...props} dispose={null} scale={[1, 1, 1]}>
       <mesh geometry={nodes.Cube.geometry} visible={shape === "Box"}>
         <meshStandardMaterial color={color === "Blue" ? Blue : Red} />
@@ -26,7 +24,6 @@ const XRModel = (props) => {
         <meshStandardMaterial color={color === "Red" ? Red : Blue} />
       </mesh>
     </group>
-    </Interactive>
   );
 };
 
