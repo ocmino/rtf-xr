@@ -16,7 +16,7 @@ const XRModel = (props) => {
   const Red = new THREE.Color(0xff0000);
 
   return (
-    <group {...props} dispose={null}>
+    <group {...props} dispose={null} scale={[1, 1, 1]}>
       <mesh geometry={nodes.Cube.geometry} visible={shape === "Box"}>
         <meshStandardMaterial color={color === "Blue" ? Blue : Red} />
       </mesh>
