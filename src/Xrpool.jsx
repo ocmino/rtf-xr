@@ -13,8 +13,7 @@ const XRPool = (props) => {
   //create a material that is see through yet occludes
 
   const occulsionMap = new THREE.MeshBasicMaterial({
-    color: 0xffffff,
-    opacity: 0.5,
+    opacity: 0,
     transparent: true,
     depthWrite: false,
     depthTest: false,
