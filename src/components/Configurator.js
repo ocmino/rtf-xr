@@ -6,9 +6,7 @@ const Configurator = () => {
 
   const [shapeOpen, setShapeOpen] = useState(false);
   const [colorOpen, setColorOpen] = useState(false);
-
-  console.log(shape, color);
-
+  
   return (
     <div className="configurator">
       <div className="configurator__section">
