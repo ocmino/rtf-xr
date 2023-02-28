@@ -18,8 +18,7 @@ const XRPool = (props) => {
     depthWrite: false,
     depthTest: false,
     blending: THREE.NoBlending,
-    alphaMap: new THREE.TextureLoader().load('/textures/occlusion.png'),
-    alphaTest: 0,
+    alphaTest: 0.1,
   })
 
 
