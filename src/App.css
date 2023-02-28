@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap");
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+
+.configurator {
+  position: fixed;
+  right: 0;
+  width: auto;
+  bottom: 0vh;
+  color: white;
+  padding: 16px;
+  background-color: #1a1a1a;
+}
+
+.configurator__section__title {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.configurator__section__values {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 12px;
+  margin-bottom: 24px;
+}
+
+.item__label {
+  font-size: 12px;
+  color: #acacac;
+  transition: 0.4s color;
+}
+
+.item {
+  transition: 0.4s opacity;
+}
+
+.item:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.item.item--active .item__label {
+  color: white;
+}
