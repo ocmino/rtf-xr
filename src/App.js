@@ -6,7 +6,7 @@ import { XR, ARButton, Controllers } from "@react-three/xr";
 import Experience from "./components/Experience";
 import Configurator from "./components/Configurator";
 import { CustomizationProvider } from "./context/Customization";
-import XRModel from "./Xrmodel";
+import XRPool from "./Xrpool";
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
             <pointLight position={[10, 10, 10]} />
             <Controllers />
             <Experience />
-            <XRModel position={[0, 0, 0.5]} />
+            <XRPool />
           </XR>
         </Canvas>
         <Configurator />
