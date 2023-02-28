@@ -6,11 +6,13 @@ import { XR, ARButton, Controllers } from "@react-three/xr";
 import Experience from "./components/Experience";
 import Configurator from "./components/Configurator";
 import { CustomizationProvider } from "./context/Customization";
+import XRModel from "./Xrmodel";
 
 function App() {
   return (
     <div className="App">
       <CustomizationProvider>
+        <ARButton />
         <ARButton />
         <Canvas>
           <XR referenceSpace="local">
@@ -18,11 +20,7 @@ function App() {
             <pointLight position={[10, 10, 10]} />
             <Controllers />
             <Experience />
-            <mesh>
-              <boxGeometry />
-              <meshNormalMaterial />
-            </mesh>
-            <Controllers />
+            <XRModel />
           </XR>
         </Canvas>
         <Configurator />

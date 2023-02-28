@@ -8,6 +8,7 @@ import { useGLTF } from "@react-three/drei";
 import { useCustomization } from "./context/Customization";
 import * as THREE from "three";
 
+
 const XRModel = (props) => {
   const { nodes } = useGLTF("/models/xrmodel.gltf");
   const { shape, color } = useCustomization();
