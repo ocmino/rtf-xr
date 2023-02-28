@@ -19,7 +19,7 @@ function App() {
             <pointLight position={[10, 10, 10]} />
             <Controllers />
             <Experience />
-            <XRModel position={[0, -0.5, 0.5]} />
+            <XRModel position={[0, 0, 0.5]} />
           </XR>
         </Canvas>
         <Configurator />
