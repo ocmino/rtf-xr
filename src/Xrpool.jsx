@@ -14,10 +14,12 @@ const XRPool = (props) => {
 
   const occulsionMap = new THREE.MeshBasicMaterial({
     opacity: 0,
-    transparent: true,
+    transparent: false,
     depthWrite: false,
     depthTest: false,
     blending: THREE.NoBlending,
+    alphaMap: new THREE.TextureLoader().load('/textures/occlusion.png'),
+    alphaTest: 0,
   })
 
 
