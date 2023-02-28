@@ -22,7 +22,6 @@ function App() {
             <XRPool
               position={[0, -2, 0]}
               rotation={[0, 0, 0]}
-              scale={[1.5, 1.5, 1.5]}
             />
           </XR>
         </Canvas>

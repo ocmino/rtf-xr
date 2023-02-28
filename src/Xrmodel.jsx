@@ -48,7 +48,7 @@ const XRModel = (props) => {
   GlassTexture_2.side = THREE.DoubleSide
 
   return (
-    <group {...props} dispose={null} scale={[0.5, 0.5, 0.5]}>
+    <group {...props} dispose={null}>
       <mesh geometry={nodes.Cube.geometry} visible={shape === "Box"}>
         <meshStandardMaterial {...color === "Red" ? GlassTexture_1 : GlassTexture_2} />
       </mesh>
