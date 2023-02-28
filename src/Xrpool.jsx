@@ -10,16 +10,39 @@ import * as THREE from 'three'
 const XRPool = (props) => {
   const { nodes, materials } = useGLTF('/models/xrpool.gltf')
 
-  //create a material that is see through yet occludes
 
-  const occulsionMap = new THREE.MeshBasicMaterial({
-    opacity: 0,
-    transparent: false,
-    depthWrite: false,
-    depthTest: false,
-    blending: THREE.NoBlending,
-    alphaTest: 0.1,
-  })
+  const customShader = {
+    uniforms: {
+      opacity: { value: 0.5 },
+    },
+    vertexShader: `
+      void main() {
+        gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+      }
+    `,
+    fragmentShader: `
+      uniform float opacity;
+  
+      void main() {
+        // Read depth from the depth buffer
+        float depth = gl_FragCoord.z / gl_FragCoord.w;
+  
+        // Calculate the opacity based on the depth
+        float newOpacity = smoothstep(0.0, 0.01, depth);
+  
+        // Set the output color to white with the custom opacity
+        gl_FragColor = vec4(1.0, 1.0, 1.0, newOpacity * opacity);
+      }
+    `,
+    blending: THREE.CustomBlending,
+    blendSrc: THREE.OneMinusDstAlphaFactor,
+    blendDst: THREE.OneMinusSrcAlphaFactor,
+    blendSrcAlpha: THREE.OneMinusDstAlphaFactor,
+    blendDstAlpha: THREE.OneMinusSrcAlphaFactor,
+  };
+  
+  const transparentMaterial = new THREE.ShaderMaterial(customShader);
+  
 
 
 
@@ -29,7 +52,7 @@ const XRPool = (props) => {
       <mesh geometry={nodes.pool_body.geometry} material={materials['pool tiles']} position={[0, -0.29, 0]} />
       <mesh geometry={nodes.pool_edge_tile.geometry} material={materials['pool edge tiles']} position={[0, -0.29, 0]} />
       <mesh geometry={nodes.Steel_Stairs.geometry} material={materials['Stainless steel']} position={[-0.28, 0.02, 0.57]} />
-      <mesh geometry={nodes.surrounding.geometry} material={occulsionMap} position={[0, -0.29, 0]} />
+      <mesh geometry={nodes.surrounding.geometry} material={transparentMaterial} position={[0, -0.29, 0]} />
     
     </group>
   ) 
