@@ -20,6 +20,7 @@ function App() {
             <Controllers />
             <Experience />
             <XRPool
+              scale={[0.5, 0.5, 0.5]}
               position={[0, 0, 0]}
               rotation={[0, 0, 0]}
             />
