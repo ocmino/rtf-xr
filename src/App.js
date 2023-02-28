@@ -13,14 +13,13 @@ function App() {
     <div className="App">
       <CustomizationProvider>
         <ARButton />
-        <ARButton />
         <Canvas>
           <XR referenceSpace="local">
             <ambientLight />
             <pointLight position={[10, 10, 10]} />
             <Controllers />
             <Experience />
-            <XRModel />
+            <XRModel position={[0, 0, -5]} />
           </XR>
         </Canvas>
         <Configurator />

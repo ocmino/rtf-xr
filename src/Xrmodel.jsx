@@ -8,13 +8,41 @@ import { useGLTF } from "@react-three/drei";
 import { useCustomization } from "./context/Customization";
 import * as THREE from "three";
 
-
 const XRModel = (props) => {
   const { nodes } = useGLTF("/models/xrmodel.gltf");
   const { shape, color } = useCustomization();
 
   const Blue = new THREE.Color(0x0000ff);
   const Red = new THREE.Color(0xff0000);
+  //double sided
+  nodes.Cube.geometry.setAttribute(
+    "color",
+    new THREE.BufferAttribute(
+      new Float32Array([
+        0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, // front
+        0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, // back
+        0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, // top
+        0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, // bottom
+        0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, // right
+        0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, // left
+      ]),
+      3
+    )
+  );
+  nodes.Sphere.geometry.setAttribute(
+    "color",
+    new THREE.BufferAttribute(
+      new Float32Array([
+        1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, // front
+        1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, // back
+        1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, // top
+        1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, // bottom
+        1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, // right
+        1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, // left
+      ]),
+      3
+    )
+  );
 
   return (
     <group {...props} dispose={null} scale={[1, 1, 1]}>
