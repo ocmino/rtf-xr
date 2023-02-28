@@ -19,7 +19,11 @@ function App() {
             <pointLight position={[10, 10, 10]} />
             <Controllers />
             <Experience />
-            <XRPool />
+            <XRPool
+              position={[0, -2, 0]}
+              rotation={[0, 0, 0]}
+              scale={[1, 1, 1]}
+            />
           </XR>
         </Canvas>
         <Configurator />
