@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App">
       <CustomizationProvider>
-        <ARButton sessionInit={{ requiredFeatures: ["hit-test"] }}/>
+        <ARButton/>
         <Canvas>
           <XR referenceSpace="local">
             <ambientLight />
