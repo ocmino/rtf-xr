@@ -5,21 +5,11 @@ Command: npx gltfjsx@6.1.4 public/models/xrpool.gltf
 
 import React from "react";
 import { useGLTF } from "@react-three/drei";
-import * as THREE from "three";
 
 const XRPool = (props) => {
   const { nodes, materials } = useGLTF("/models/xrpool.gltf");
 
   
-
-  //create a material that is transparent but hides all meshes behind it
-  const occulsionMap = new THREE.MeshBasicMaterial({
-    opacity:0,
-    transparent: true,
-    depthWrite: false,
-    depthTest: false,
-    blending: THREE.NoBlending,
-  });
 
   return (
     <group {...props} dispose={null}>
