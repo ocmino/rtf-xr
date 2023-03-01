@@ -6,8 +6,9 @@ import { XR, ARButton } from "@react-three/xr";
 import Experience from "./components/Experience";
 import Configurator from "./components/Configurator";
 import { CustomizationProvider } from "./context/Customization";
-import Rymdskit from "./Rymdskit";
+
 import { Environment } from "@react-three/drei";
+import XRPool from "./Xrpool";
 
 function App() {
   return (
@@ -18,8 +19,8 @@ function App() {
           <Environment preset="warehouse" />
           <XR referenceSpace="local-floor">
             <Experience />
-            <Rymdskit 
-              position={[0, -0.5, 0]}
+            <XRPool 
+              position={[0, 0, 0]}
               rotation={[0, 0, 0]}
               scale={[1, 1, 1]}
               />
