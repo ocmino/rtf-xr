@@ -4,10 +4,8 @@ const Experience = () => {
   return (
     <>
       <OrbitControls
-        maxDistance={8}
-        minDistance={1}
-        maxPolarAngle={Math.PI / 2.5}
-        maxAzimuthAngle={Math.PI / 4}
+        maxDistance={1.5}
+        minDistance={0.5}
       />
     </>
   );
