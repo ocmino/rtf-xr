@@ -15,15 +15,11 @@ function App() {
       <CustomizationProvider>
         <ARButton/>
         <Canvas>
-        <ambientLight />
-          <XR referenceSpace="local">
+          <XR referenceSpace="local-floor">
+            <ambientLight />
             <pointLight position={[10, 10, 10]} />
             <Controllers />
-            <Experience 
-            scale={[0.1, 0.1, 0.1]}
-            position={[0, 0, 0]}
-            rotation={[0, 0, 0]}
-            />
+            <Experience />
            <Rymdskit />
           </XR>
         </Canvas>

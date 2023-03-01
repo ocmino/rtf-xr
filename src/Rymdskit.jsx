@@ -10,13 +10,8 @@ const Rymdskit = (props) => {
   const { nodes, materials } = useGLTF('/models/rymdskit.gltf')
   return (
     <group {...props} dispose={null}>
-      <mesh geometry={nodes.Cylinder012.geometry} material={materials['Material.010']} />
-      <mesh geometry={nodes.Cylinder012_1.geometry} material={materials['Material.008']} />
-      <mesh geometry={nodes.Cube.geometry} material={materials['Material.009']} rotation={[-0.17, 0, 0]} />
-      <mesh geometry={nodes.Cube002.geometry} material={materials['Fabric.001']} rotation={[-0.17, 0, 0]} />
-      <mesh geometry={nodes.Cube003.geometry} material={materials['Fabric.001']} rotation={[-1.66, 0, -Math.PI]} />
-      <mesh geometry={nodes.Cube006.geometry} material={materials['Fabric.001']} rotation={[-0.17, 0, 0]} />
-      <mesh geometry={nodes.Cylinder.geometry} material={materials['Material.008']} />
+      <mesh geometry={nodes.Plane.geometry} material={materials['Fabric.002']} />
+      <mesh geometry={nodes.Plane_1.geometry} material={materials['Wood (Bare Brown )']} />
     </group>
   )
 }
