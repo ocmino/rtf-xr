@@ -10,14 +10,12 @@ import * as THREE from "three";
 const XRPool = (props) => {
   const { nodes, materials } = useGLTF("/models/xrpool.gltf");
 
-  
-
   //create a material that is transparent but hides all meshes behind it
   const occulsionMap = new THREE.MeshBasicMaterial({
-    opacity:0,
+    opacity: 0,
     transparent: true,
-    depthWrite: false,
-    depthTest: false,
+    depthWrite: true,
+    depthTest: true,
     blending: THREE.NoBlending,
   });
 
@@ -32,11 +30,6 @@ const XRPool = (props) => {
         geometry={nodes.pool_edge_tile.geometry}
         material={materials["pool edge tiles"]}
         position={[0, -0.29, 0]}
-      />
-      <mesh
-        geometry={nodes.Steel_Stairs.geometry}
-        material={materials["Stainless steel"]}
-        position={[-0.28, 0.02, 0.57]}
       />
       <mesh
         geometry={nodes.surrounding.geometry}
