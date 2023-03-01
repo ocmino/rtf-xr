@@ -10,82 +10,13 @@ const Rymdskit = (props) => {
   const { nodes, materials } = useGLTF('/models/rymdskit.gltf')
   return (
     <group {...props} dispose={null}>
-      <group position={[0, 4.16, 9.79]} rotation={[Math.PI / 2, 0, Math.PI]}>
-        <mesh geometry={nodes.Cylinder005.geometry} material={materials['Material.002']} />
-        <mesh geometry={nodes.Cylinder005_1.geometry} material={materials['Scratched metal']} />
-        <mesh geometry={nodes.Cylinder005_2.geometry} material={materials['Stainless Steel Grate']} />
-        <mesh geometry={nodes.Cylinder005_3.geometry} material={materials['Material.001']} />
-        <mesh geometry={nodes.Cylinder005_4.geometry} material={materials['SciFi Plastic 02.002']} />
-        <group position={[-1.87, 1.26, -2.04]} rotation={[0, -1.01, 0]}>
-          <mesh geometry={nodes.Cylinder009.geometry} material={materials['SciFi Plastic 02']} />
-          <mesh geometry={nodes.Cylinder009_1.geometry} material={materials['Scratched metal.001']} />
-          <mesh geometry={nodes.Cylinder009_2.geometry} material={materials['Metallic Gold']} />
-          <mesh geometry={nodes.Cylinder009_3.geometry} material={materials['Stainless Steel Grate']} />
-          <mesh geometry={nodes.Cylinder009_4.geometry} material={materials['Circuit board']} />
-          <mesh geometry={nodes.Cylinder009_5.geometry} material={materials['Steampunk Control Panel Metal Finish']} />
-          <mesh geometry={nodes.Cylinder009_6.geometry} material={materials['Scifi Panels 03']} />
-          <mesh geometry={nodes.Cylinder009_7.geometry} material={materials['Procedural Sci-fi Tiles']} />
-        </group>
-        <mesh geometry={nodes.Cylinder010.geometry} material={materials['SciFi Plastic 02']} />
-        <mesh geometry={nodes.Cylinder010_1.geometry} material={materials['Scratched metal.001']} />
-        <mesh geometry={nodes.Cylinder010_2.geometry} material={materials['Metallic Gold']} />
-        <mesh geometry={nodes.Headlight_E.geometry} material={materials['Material.003']} />
-        <mesh geometry={nodes.HeadlightGlass.geometry} material={materials['Architectural glass']} />
-      </group>
-      <mesh geometry={nodes.HULL.geometry} material={materials['Scratched metal']} position={[0, 4.16, -1.3]} rotation={[Math.PI / 2, 0, Math.PI]}>
-        <mesh geometry={nodes.CarbonSupports.geometry} material={materials['Procedural Carbon Fiber']} position={[0, -3.79, 0]} />
-        <group position={[0, 0, -1.91]} rotation={[-Math.PI / 2, 0, 0]}>
-          <mesh geometry={nodes.Cube008.geometry} material={materials['Scratched metal']} />
-          <mesh geometry={nodes.Cube008_1.geometry} material={materials['Stainless Steel Grate']} />
-          <mesh geometry={nodes.Cube008_2.geometry} material={materials['Material.001']} />
-          <mesh geometry={nodes.Cube008_3.geometry} material={materials['SciFi Plastic 02']} />
-        </group>
-        <group position={[0, 0, 2.73]} rotation={[-Math.PI / 2, 0, 0]}>
-          <mesh geometry={nodes.Cube007.geometry} material={materials['Scratched metal']} />
-          <mesh geometry={nodes.Cube007_1.geometry} material={materials['Stainless Steel Grate']} />
-          <mesh geometry={nodes.Cube007_2.geometry} material={materials['Scratched metal']} />
-          <mesh geometry={nodes.Cube007_3.geometry} material={materials['Material.001']} />
-          <mesh geometry={nodes.Cube007_4.geometry} material={materials['SciFi Plastic 02']} />
-          <mesh geometry={nodes.Cube007_5.geometry} material={materials['SciFi Panelling 03']} />
-        </group>
-        <group position={[0, 0, -1.91]} rotation={[-Math.PI / 2, 0, 0]}>
-          <mesh geometry={nodes.Cube006.geometry} material={materials['Scratched metal']} />
-          <mesh geometry={nodes.Cube006_1.geometry} material={materials['Stainless Steel Grate']} />
-          <mesh geometry={nodes.Cube006_2.geometry} material={materials['Material.001']} />
-          <mesh geometry={nodes.Cube006_3.geometry} material={materials['SciFi Plastic 02']} />
-        </group>
-        <group rotation={[-Math.PI / 2, 0, 0]}>
-          <mesh geometry={nodes.Cube005.geometry} material={materials['Scratched metal']} />
-          <mesh geometry={nodes.Cube005_1.geometry} material={materials['Material.001']} />
-          <mesh geometry={nodes.Cube005_2.geometry} material={materials['Brown and gold triangle pattern']} />
-        </group>
-        <mesh geometry={nodes.Cylinder002.geometry} material={materials['Stainless Steel Grate']} />
-        <mesh geometry={nodes.Cylinder002_1.geometry} material={materials['Scratched metal']} />
-        <mesh geometry={nodes.Cylinder002_2.geometry} material={materials['Material.001']} />
-        <mesh geometry={nodes.Cylinder002_3.geometry} material={materials['Scratched metal']} />
-        <mesh geometry={nodes.Cylinder002_4.geometry} material={materials['SciFi Plastic 02']} />
-        <mesh geometry={nodes.Cylinder006.geometry} material={materials['SciFi Plastic 02.001']} />
-        <mesh geometry={nodes.Cylinder006_1.geometry} material={materials['Scratched metal']} />
-        <mesh geometry={nodes.Cylinder006_2.geometry} material={materials['Procedural Metal With Imprfections']} />
-        <mesh geometry={nodes.Cylinder006_3.geometry} material={materials['Procedural Metal Plates']} />
-        <mesh geometry={nodes.Cylinder006_4.geometry} material={materials['Stainless Steel Grate']} />
-        <mesh geometry={nodes.Cylinder006_5.geometry} material={materials['Chrome with errosion - procedural']} />
-        <mesh geometry={nodes.Cylinder006_6.geometry} material={materials['Material.001']} />
-        <mesh geometry={nodes.Cylinder006_7.geometry} material={materials['Stainless Steel Grate']} />
-        <mesh geometry={nodes.Cylinder006_8.geometry} material={materials['Material.004']} />
-      </mesh>
-      <group position={[0, 4.16, 5.71]} rotation={[Math.PI / 2, 0, Math.PI]}>
-        <mesh geometry={nodes.Cylinder001.geometry} material={materials['Scratched metal']} />
-        <mesh geometry={nodes.Cylinder001_1.geometry} material={materials['Stainless Steel Grate']} />
-        <mesh geometry={nodes.Metal_Binds.geometry} material={materials['Scratched metal']} position={[0, -1.38, 0]} />
-        <group position={[0, 1.78, 0]}>
-          <mesh geometry={nodes.Cylinder004.geometry} material={materials['Stainless Steel Grate']} />
-          <mesh geometry={nodes.Cylinder004_1.geometry} material={materials['Scratched metal']} />
-          <mesh geometry={nodes.Cylinder004_2.geometry} material={materials['Material.001']} />
-          <mesh geometry={nodes.Cylinder004_3.geometry} material={materials['Scratched metal']} />
-          <mesh geometry={nodes.Cylinder004_4.geometry} material={materials['SciFi Plastic 02']} />
-        </group>
-      </group>
+      <mesh geometry={nodes.Cylinder012.geometry} material={materials['Material.010']} />
+      <mesh geometry={nodes.Cylinder012_1.geometry} material={materials['Material.008']} />
+      <mesh geometry={nodes.Cube.geometry} material={materials['Material.009']} rotation={[-0.17, 0, 0]} />
+      <mesh geometry={nodes.Cube002.geometry} material={materials['Fabric.001']} rotation={[-0.17, 0, 0]} />
+      <mesh geometry={nodes.Cube003.geometry} material={materials['Fabric.001']} rotation={[-1.66, 0, -Math.PI]} />
+      <mesh geometry={nodes.Cube006.geometry} material={materials['Fabric.001']} rotation={[-0.17, 0, 0]} />
+      <mesh geometry={nodes.Cylinder.geometry} material={materials['Material.008']} />
     </group>
   )
 }
