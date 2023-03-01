@@ -7,7 +7,7 @@ import Experience from "./components/Experience";
 import Configurator from "./components/Configurator";
 import { CustomizationProvider } from "./context/Customization";
 import XRModel from "./Xrmodel";
-import { MeshReflectorMaterial } from "@react-three/drei";
+
 
 function App() {
   return (
@@ -20,11 +20,11 @@ function App() {
             <pointLight position={[10, 10, 10]} />
             <Controllers />
             <Experience />
-            <XRModel />
-            <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -1, 0]}>
-              <circleGeometry attach="geometry" args={[100, 100]} />
-              <MeshReflectorMaterial attach="material" color="lightgrey" />
-            </mesh>
+            <XRModel
+              position={[0, 0, 0]}
+              scale={[0.1, 0.1, 0.1]}
+              rotation={[0, 0, 0]}
+            />
           </XR>
         </Canvas>
         <Configurator />
