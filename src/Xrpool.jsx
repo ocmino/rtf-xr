@@ -25,11 +25,13 @@ const XRPool = (props) => {
         geometry={nodes.pool_body.geometry}
         material={materials["pool tiles"]}
         position={[0, -0.29, 0]}
+        renderOrder={1}
       />
       <mesh
         geometry={nodes.pool_edge_tile.geometry}
         material={materials["pool edge tiles"]}
         position={[0, -0.29, 0]}
+        renderOrder={1}
       />
       <mesh
         geometry={nodes.surrounding.geometry}
