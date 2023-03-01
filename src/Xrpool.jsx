@@ -19,7 +19,6 @@ const XRPool = (props) => {
     depthWrite: false,
     depthTest: false,
     blending: THREE.NoBlending,
-    
   });
 
   return (
@@ -32,11 +31,6 @@ const XRPool = (props) => {
       <mesh
         geometry={nodes.pool_edge_tile.geometry}
         material={materials["pool edge tiles"]}
-        position={[0, -0.29, 0]}
-      />
-      <mesh
-        geometry={nodes.surrounding.geometry}
-        material={occulsionMap}
         position={[0, -0.29, 0]}
       />
     </group>
